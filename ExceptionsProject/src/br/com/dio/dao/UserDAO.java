@@ -1,5 +1,6 @@
 package br.com.dio.dao;
 
+import br.com.dio.exception.EmptyStorageException;
 import br.com.dio.exception.UserNotFoundException;
 import br.com.dio.model.UserModel;
 
@@ -39,6 +40,19 @@ public class UserDAO {
     }
 
     public List<UserModel> findAll() {
-        return models;
+        List<UserModel> result;
+        try {
+            verifyStorage();
+            result = models;
+        }catch (EmptyStorageException e) {
+            e.printStackTrace();
+            result = new ArrayList<>();
+        }finally {
+            return models;
+        }
+    }
+
+    private void verifyStorage() {
+        if (models.isEmpty()) throw new EmptyStorageException("O armazenamento está vazio.");
     }
 }
