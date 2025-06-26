@@ -9,5 +9,8 @@ public class Main {
         System.out.println(newPerson);
         System.out.println(newPerson.getInfo());
 
+        var person2 = new Person("Maria");
+        System.out.println(person2.getInfo());
+
     }
 }
