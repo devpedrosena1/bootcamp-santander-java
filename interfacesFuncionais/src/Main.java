@@ -4,6 +4,10 @@ import java.util.function.Function;
 
 public class Main {
 
+//    static String text(String j) {
+//        return JOptionPane.showInputDialog(j);
+//    }
+
     public static void main(String[] args) {
 
         List<User> users = List.of(
@@ -26,6 +30,8 @@ public class Main {
 
         // usando lambda expression
         users.forEach((User user) -> System.out.println(user));
+
+        // lambda expression simples
         users.forEach(System.out::println);
 
     }
