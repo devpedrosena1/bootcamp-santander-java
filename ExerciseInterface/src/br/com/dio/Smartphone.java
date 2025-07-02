@@ -22,4 +22,5 @@ public class Smartphone implements TeamMarketing {
         System.out.println("This smartphone submit a message from e-mail");
     }
 
+
 }
