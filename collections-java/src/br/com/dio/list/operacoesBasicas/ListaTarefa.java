@@ -57,5 +57,8 @@ public class ListaTarefa {
 
         listaTarefa.obterDescricoesTarefas();
 
+        listaTarefa.adicionarTarefa("Tarefa 3");
+        System.out.println(listaTarefa.obterNumeroTotalDeTarefas());
+
     }
 }
