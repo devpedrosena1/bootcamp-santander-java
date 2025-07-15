@@ -33,6 +33,7 @@ public class UsuarioController {
         return repository.finById(id);
     }
 
+    @DeleteMapping("/usuario/{id}")
     public void delete(@PathVariable("id") Integer id) {
         repository.remove(id);
     }
