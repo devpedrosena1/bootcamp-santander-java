@@ -1,5 +1,6 @@
 package one.digitalInnovation.gof;
 
+import one.digitalInnovation.gof.facade.Facade;
 import one.digitalInnovation.gof.singleton.SingletonEager;
 import one.digitalInnovation.gof.singleton.SingletonLazy;
 import one.digitalInnovation.gof.singleton.SingletonLazyHolder;
@@ -37,6 +38,10 @@ public class Test {
         robo.mover();
         robo.mover();
         robo.mover();
+
+        // Facade
+        Facade facade = new Facade();
+        facade.migrarCliente("Pedro", "03950000");
 
     }
 
