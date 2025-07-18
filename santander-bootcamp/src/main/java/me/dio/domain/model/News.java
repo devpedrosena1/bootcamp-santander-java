@@ -1,52 +1,9 @@
 package me.dio.domain.model;
 
-public class News {
+import jakarta.persistence.Entity;
 
-    private Long id;
-    private String icon;
-    private String description;
+@Entity(name = "tb_news")
+public class News extends BaseItem {
 
-    public News() {
-        super();
-    }
 
-    public News(Long id, String icon, String description) {
-        super();
-        this.id = id;
-        this.icon = icon;
-        this.description = description;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @Override
-    public String toString() {
-        return "News{" +
-                "id=" + id +
-                ", icon='" + icon + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }
